@@ -3,3 +3,4 @@ pyensign
 pandas
 transformers
 torch
+torchvision
