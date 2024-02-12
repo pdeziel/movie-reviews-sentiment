@@ -2,3 +2,4 @@ streamlit
 pyensign
 pandas
 transformers
+torch
