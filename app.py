@@ -23,8 +23,8 @@ async def app(ensign):
     model_path = models.iloc[-1]["model_path"]
     model_version = models.iloc[-1]["model_version"]
     st.write("Using model {} @ {}".format(model_path, model_version))
-    model = AutoModelForSequenceClassification.from_pretrained(model_path, version=model_version)
-    tokenizer = AutoTokenizer.from_pretrained(model_path, version=model_version)
+    model = AutoModelForSequenceClassification.from_pretrained(model_path, revision=model_version)
+    tokenizer = AutoTokenizer.from_pretrained(model_path, revision=model_version)
     sent = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
     handle_input(sent)
 
